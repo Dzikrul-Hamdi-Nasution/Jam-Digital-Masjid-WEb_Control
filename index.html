@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  	
+  	<title>JamDigital</title>
+	
+<!-- Tell the browser to be responsive to screen width -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- icheck bootstrap -->
+  <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <!-- Google Font: Source Sans Pro -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+</head>
+<body class="hold-transition login-page">
+    
+	    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+	    	<div class="container">
+	  			<a class="navbar-brand text-white" href="#page-top"><b>Jam</b>Digital	</a>
+	 		 	<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+	    			<span class="navbar-toggler-icon"></span>
+	  			</button>
+	  		<div class="collapse navbar-collapse" id="navbarNav">
+	    		<ul class="navbar-nav ml-auto">
+	      			<li class="nav-item active">
+	        			<a class="nav-link js-scroll-trigger text-white" href="#jam"><i class="far fa-clock mr-2"></i> JAM INDONESIA <span class="sr-only">(current)</span></a>
+	      			</li>
+	      			<li class="nav-item">
+	        			<a class="nav-link js-scroll-trigger text-white" href="#calender"><i class="fas fa-calendar-alt mr-2"></i>KALENDER</a>
+	      			</li>
+			<li class="nav-item">
+	        <a class="nav-link js-scroll-trigger text-white" href="#adzan"><i class="fas fa-mosque mr-2"></i>JADWAL ADZAN</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link js-scroll-trigger text-white" href="#contact"><i class="fas fa-phone-volume mr-2"></i>HUBUNGI KAMI</a>
+	      </li>
+	      <li class="nav-item">
+	      	<a class="btn btn-secondary nav-link js-scroll-trigger text-white" href="login.html">LOGIN</a>
+	      </li>
+
+	      </ul>
+	  </div>
+	  </div>
+	</nav>
+
+<div class="container m-5">
+  <div id="jam"></div>
+	<div class="row">	
+		<div class="col-12 col-md-12 pt-md-0 p-1 mt-4">
+      <div class="d-flex flex-column bg-white">
+      <div class="bg-success p-4">
+        <div class="col-md-6 float-left">
+          <h2><i class="fa fa-clock mr-2"></i>Waktu dan Tanggal</h2>
+          <h4 class="font-weight-light">Menampilkan waktu dan tanggal</h4>
+        </div>
+       </div>
+       <div class="row">
+        <div class="col-md-3 ml-4 p-3">
+            <form style="font-size: 20px;">
+             <fieldset disabled>
+                <div class="row">
+                <div class="col-4">
+                  <label>Jam</label>
+                  <p id="jam1"></p>
+                </div>
+                <div class="col-4">
+                  <label>Menit</label>
+                  <p id="menit1"></p>
+                </div>
+                <div class="col-4">
+                  <label>Detik</label>
+                  <p id="detik1"></p>
+                </div>
+          </div>
+              </fieldset> 
+            </form>
+        </div>
+
+        <div class="col-md-4 ml-4 p-3">
+  
+            <form style="font-size: 20px;">
+             <fieldset disabled>
+                <div class="row">
+                <div class="col-4">
+                  <label>Tanggal</label>
+                  <p id="tanggal1"></p>
+                </div>
+                <div class="col-4">
+                  <label>Bulan</label>
+                  <p id="bulan1"></p>
+                </div>
+                <div class="col-4">
+                  <label>Tahun</label>
+                  <p id="tahun1"></p>
+                </div>
+          </div>
+              </fieldset> 
+            </form>
+        </div>
+      </div>  
+
+    </div>
+    </div>  
+    </div>	
+		
+
+	 <div class="row">
+    <!-- Fitur tabel kalender -->
+    <div id="calender"></div>
+	 	<div class="col-12 col-md-8 pt-md-0 p-1 mt-5">
+	 		<div class="d-flex flex-column bg-white">
+	 			<div class="bg-success p-4" style="border-radius: 5px;">
+          <div class="col-md-6 float-left">
+	 				<h3> <i class="fa fa-calendar-alt"></i> Kalender</h3>
+	 				<h4 class="font-weight-light">Tabel kalender update setiap saat</h4>      
+          </div>
+	 			</div>
+	 			<div class="d-inline-flex bg-white px-2 m-2">
+	 				<iframe id="g2hFrame" title="islamic-calendar"  style="width: 100%; height: 358px; border: 1px solid #ddd;" src="https://www.islamicfinder.org/islamic-calendar/widgetGregorian?type=Gregorian" class="text-center"> </iframe>
+	 			</div>
+	 		</div>
+	 	</div>
+
+    <!-- Fitur Waktu Sholat -->
+    <!-- <div id="adzan"></div> -->
+	 	<div class="col-12 col-md-4 pt-md-0 p-1 mt-5" id="adzan">
+	 		<div class="d-flex flex-column bg-white">
+	 		<div class="bg-success p-4" style="border-radius: 5px;">
+	 			<div class="col-md-8 float-left">
+	 				<h3> <i class="fa fa-mosque"></i> Waktu Sholat</h3>
+	 				<h4 class="font-weight-light">Kota Medan, Karang Berombak</h4>
+	 			</div>
+	 		</div>
+	 			<div class="d-inline-flex bg-white px-2 ml-3 m-2">
+	 				 <script type="text/javascript" src="http://www.muslimpro.com/muslimprowidget.js?cityid=1214520&language=id&width=500&timeformat=24&headerbackgroundcolor=ffffff&headertextcolor=000000&textcolor=000000&rowbackgroundcolor1=ffffff&rowbackgroundcolor2=cccccc" async></script>
+	 			</div>		
+	 	</div>
+	 </div>
+
+		</div>
+
+		</div>
+  
+       
+     
+    
+     
+  
+     
+    <script>
+      window.setTimeout("waktu()", 1000);
+     
+      function waktu() {
+        var waktu = new Date();
+        setTimeout("waktu()", 1000);
+        document.getElementById("jam1").innerHTML = waktu.getHours();
+        document.getElementById("menit1").innerHTML = waktu.getMinutes();
+        document.getElementById("detik1").innerHTML = waktu.getSeconds();
+        document.getElementById("tanggal1").innerHTML = waktu.getDate();
+        document.getElementById("bulan1").innerHTML = waktu.getMonth();
+        document.getElementById("tahun1").innerHTML = waktu.getFullYear();
+      }
+
+      function kirim(){
+        var nodemailer = require('nodemailer');
+
+        var transporter = nodemailer.createTransport({
+            service: 'gmail',
+            auth: {
+                user: 'dzikrulhamdinasution@gmail.com',
+                pass: 'Master75wew'
+            }
+        });
+
+        var mailOptions = {
+            from: 'dzikrulhamdinasution@gmail.com',
+            to: 'hamdiganteng91@gmail.com',
+            subject: 'Uji coba kirim SMS',
+            text: 'Assalamualaikum'
+        };
+
+        transporter.sendMail(mailOptions, (err, info) => {
+            if (err) throw err;
+            console.log('Email sent: ' + info.response);
+            alert('Email sent: ' + info.response);
+        });
+        alert("oke")
+      }
+
+
+    </script>
+
+
+   <!-- fitur contact person --> 
+   <div id="contact"></div> 
+	<div class="fluid-container">
+		<div class="row">
+			<div class="col-md-4 bg-white p-5">
+				<h1><i class="fa fa-phone-volume m-2"></i> Hubungi Kami</h1>
+				<p>Jika ada kritik, saran, pertanyaan, atau hal yang ingin di diskusi, kirim pesan Anda melalui form message ini.
+				Kami akan menanggapi pesan Anda secepatnya.</p>
+			</div>
+
+			<div class="col-md-8 bg-success p-5">
+				<h3 class="font-weight-bold">
+                    Isi data diri Anda dengan benar   
+				</h3>
+
+			<form>
+  				<div class="form-row">
+    				<div class="form-group col-md-6">
+      					<label>Nama depan</label>
+      					<input type="text" class="form-control" id="inputEmail4" placeholder="Nama depan Anda">
+    				</div>
+   				 <div class="form-group col-md-6">
+     					<label for="inputPassword4">Nama belakang</label>
+      					<input type="text" class="form-control" id="inputPassword4" placeholder="Nama belakang Anda">
+    			</div>
+  			</div>
+  				<div class="form-group">
+    					<label>Email</label>
+    					<input type="text" class="form-control" id="inputAddress" placeholder="Email Anda">
+  				</div>
+
+  				<div class="form-group">
+    					<label>Nomor Telepon</label>
+    					<input type="number" class="form-control" id="inputAddress" placeholder="Nomor telepon Anda">
+  				</div>
+
+  				<div class="form-group">
+  					<label>Isi Pesan</label>
+  					<textarea class="form-control" rows="7">
+  						
+  					</textarea>
+  				</div>
+  				<div class="form-group">
+            <button onclick="hapus()" type="submit" class="btn btn-danger">Reset</button>
+    					<button onclick="kirim()" type="submit" class="btn btn-primary">Kirim Pesan</button>
+  				</div>
+  		
+		</form>
+			</div>	
+		</div>
+	</div>
+
+
+
+<div class="col-12 col-md-12 bg-dark p-3 p-md-5 mt-5">
+  <div class="container">
+    <div class="row">
+    <div class="col-12 col-md-12">
+      <h4 class="font-weight-bold">Tentang Kami</h4>
+      <div class="row">
+        <div class="col-md-6 p-3 p-md-5 mt-2">
+          <h5><b>Salam Electronics Project</b> (Back-End Logical)</h5>
+          <img src="sep.jpeg" style="border-radius: 50%; width: 120px; height: 120px; padding: 5px;">
+          <h6 class="font-weight-bold">Alamat</h6>
+          <p>Jl. Karya 1</p>
+          <h6 class="font-weight-bold">Social Media</h6>
+          <ul style="list-style: none; padding: 4px; font-size: 18px;">
+            <li>
+              <a href="https://www.instagram.com/salam.electro/" class="text-white" target="_blank">
+               <i class="fab fa-instagram"></i>
+               Instagram
+              </a>
+            </li>
+            <li>
+              <a href="https://api.whatsapp.com/send?phone=6281285295853" class="text-white" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+                Whatsapp
+              </a>
+            </li>
+            <li>
+            <a href="https://www.facebook.com/ESHAN.tech" class="text-white" target="_blank">
+              <i class="fab fa-facebook-square"></i>
+              Facebook
+            </a>
+          </li>
+          </ul>
+        </div>
+        <div class="col-md-6 p-3 p-md-5 mt-2">
+           <h5><b>Fadelhood</b> (Front-End Design)</h5>
+          <img src="fadelhood.jpg" style="border-radius: 50%; width: 120px; height: 120px; padding: 5px;">
+          <br>
+          <h6 class="font-weight-bold">Alamat</h6>
+          <p>Jl. Karya Gg. Salak No. 9H Kecamatan Medan Barat, Kelurahan Karang Berombak</p>
+          <h6 class="font-weight-bold">Social Media</h6>
+          <ul style="list-style: none; padding: 4px; font-size: 18px;">
+            <li>
+              <a href="https://www.instagram.com/fadelhood_/" target="_blank" class="text-white">
+               <i class="fab fa-instagram"></i>
+               Instagram
+              </a>
+            </li>
+            <li>
+              <a href="https://bit.ly/33Ay0vn" class="text-white" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+                Whatsapp
+              </a>
+            </li>
+            <li>
+            <a href="https://github.com/defadels" class="text-white" target="_blank">
+              <i class="fab fa-github"></i>
+              Github
+            </a>
+          </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-12 text-center p-2">
+        <span class="text-center">2020 &copy;Copyright <b>Jam</b>Digital made by @fadelhood_ and @salam.electro </span>    
+      </div>
+    </div>
+</div>
+  </div>
+</div>
+
+
+<!-- jQuery -->
+<script src="plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap -->
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- jQuery UI -->
+<script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+<!-- AdminLTE App -->
+<script src="dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="dist/js/demo.js"></script>
+<!-- Script login -->
+<script type="text/javascript" src="login.js"></script>
+
+
+</body>
+</html>
